@@ -1,0 +1,471 @@
+:root {
+  --color-text: #050c4bff;
+  --bkgrcolor_section: rgba(255, 255, 255, 0.8);
+  --bkgrcolor_element: rgba(161, 163, 168, 1);
+}
+
+html,
+body {
+  margin: 0;
+  background-image: url(../images/tlo2.jpg);
+
+  background-repeat: repeat;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1240px;
+  padding: 0 15px;
+  margin: 10px auto;
+}
+header {
+  background-image: url(../images/bg_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+
+  /*
+  background-color: rgba(38, 153, 224, 0.5);*/
+  background-color: rgba(191, 215, 230, 0.5);
+  min-height: 65vw;
+  justify-items: center;
+  margin-top: 0;
+  position: relative;
+  margin-top: -60px;
+}
+section {
+  margin: 30px auto;
+
+  background-color: var(--bkgrcolor_section);
+  padding: 10px 0 10px 0;
+}
+section h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  text-align: center;
+  color: #050c4bff;
+}
+section h2 {
+  font-size: 1.7em;
+  font-weight: 400;
+  text-align: left;
+  color: blue;
+}
+
+section p {
+  font-size: 1.2em;
+}
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: var(--bkgrcolor_section);
+}
+.footer p {
+  font-size: 1.2em;
+}
+.footer div{
+  margin:10px;
+  padding:10px;}
+}
+/* ============================ Langvidge button=================================*/
+#langv {
+  position: absolute;
+  z-index: 12;
+  display: flex;
+  /*width: 10%;
+  /* background-color: white; */
+  margin-left: 95%;
+  justify-content: flex-end;
+}
+
+#langv .button {
+  margin: 2px;
+  padding: 1px;
+  background-color: rgb(197, 230, 235);
+}
+#langv .button a {
+  color: black;
+  text-decoration: none;
+}
+#langv .button a:hover {
+  color: rgb(124, 118, 118);
+}
+/*=========================================Title=======================================*/
+.title {
+  /*backdrop-filter: sepia(0.5) opacity(0.8);*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3vw;
+  font-weight: 900;
+  color: var(--color-text);
+  /*color: rgb(5, 12, 75);*/
+  margin: 0 auto;
+}
+.title h1,
+.title h3 {
+  margin: 10vh auto;
+  text-align: center;
+}
+.title-top {
+  display: flex;
+  align-items: center;
+}
+hr {
+  border: none;
+  background-color: rgb(58, 56, 56);
+  color: rgb(58, 56, 56);
+  height: 1px;
+}
+#adress {
+  background-color: var(--bkgrcolor_section);
+  font-size: 1.2rem;
+}
+#adress span {
+  color: blue;
+}
+/*===============================================Main block===================================================*/
+#main {
+  background-color: var(--bkgrcolor_section);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.main_side {
+  /* background-color: brown;*/
+  flex: 6;
+  padding: 10px;
+  /* margin: 1%
+  align-items: stretch;*/
+}
+p {
+  text-align: justify;
+  font-size: 1.4em;
+}
+ul,
+ol {
+  font-size: 1.4em;
+}
+
+/*============================Arrow==========*/
+
+#buttonup {
+  position: fixed;
+  top: 575px;
+  right: 25px;
+  z-index: 100;
+  opacity: 0.5;
+}
+#arrow {
+  height: 50px;
+  width: 50px;
+}
+
+#arrow a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*===========================================MENUdropddown==============================================*/
+.scroll-area {
+  min-height: 800px;
+  background-image: url(../images/tlo2.jpg);
+
+  background-repeat: repeat;
+  padding: 0;
+}
+.top-munu {
+  color: #000;
+  animation: menuApear 0.5s linear forwards;
+}
+@keyframes menuApear {
+  from {
+    background: rgba(161, 163, 168, 1);
+  }
+  to {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+.igm_stk {
+  display: block;
+  position: sticky;
+  z-index: 999;
+  top: 0px;
+  /* background-color: white;*/
+  background-color: rgba(161, 163, 168, 1);
+
+  padding-top: 20px;
+}
+.igm_menu {
+  display: flex;
+  justify-content: space-between;
+
+  height: 30px;
+  width: 100%;
+  margin: auto;
+}
+.igm_stk :hover {
+}
+.igm_dropdown_main {
+  display: block;
+  cursor: pointer;
+  padding-bottom: 14px;
+  /*border-bottom: 1px solid grey;*/
+}
+.igm_dropdown_father {
+  position: relative;
+  display: inline-block;
+  flex-basis: 180px;
+  text-align: center;
+}
+.igm_dropdown_child {
+  display: none;
+  text-decoration: none;
+  background-color: rgba(173, 173, 184, 0.8);
+  /*text-align: left;*/
+}
+.igm_dropdown_father:hover {
+  /*background-color: red;*/
+}
+
+.igm_dropdown_father:hover .igm_dropdown_child {
+  display: block;
+}
+.igm_a {
+  border-bottom: 1px solid grey;
+  min-width: 50px;
+  display: block;
+  padding: 10px 0px 10px 5px;
+}
+a {
+  color: rgb(5, 12, 75);
+  font-size: 1.4rem;
+  text-decoration: none;
+  min-width: 50px;
+
+  transition: background-color 0.4s ease-in-out, -webkit-transform 0.4s;
+}
+p {
+  line-height: 30px;
+  text-indent: 3em; /*абзацний відступ*/
+}
+a:hover {
+  font-style: bold;
+
+  background-color: rgba(161, 163, 168, 0.8);
+}
+a.igm_a:hover {
+  box-shadow: inset 0px 0px 16px 0px #e1e7fb;
+}
+.igm_content {
+  width: 80%;
+  margin: auto;
+  margin-top: 42px;
+}
+/*End Menu*/
+.news-Instute {
+  width: 30%;
+  background-color: red;
+}
+
+/*=====================================Images container=======================================================*/
+.container-images {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 300px);
+}
+.container-images > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*===============================Section Team++++++++++++++++++++++++++++++++++++++++++++===*/
+
+.team_box {
+  /*position: relative;*/
+  margin: 40px auto;
+  width: 80%;
+  min-height: 140px;
+  /* overflow: auto*/
+  top: 10px;
+  z-index: -1;
+  box-shadow: 0px 0px 16px 0px #e1e7fb;
+}
+.team_photo {
+  /*position: absolute;
+	left: 4px;*/
+  border-radius: 80px;
+  width: 130px;
+  height: 130px;
+  z-index: -1;
+  float: left;
+  box-shadow: 0px 0px 16px 0px #e1e7fb;
+}
+.team_name {
+  font-size: 1.6em;
+  /*18px;*/
+  font-weight: bold;
+  margin-left: 140px;
+  margin-top: 3px;
+  z-index: -1;
+}
+.team_position {
+  margin-left: 140px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  z-index: -1;
+}
+.team_about {
+  margin-top: 10px;
+  margin-left: 140px;
+  font-size: 15px;
+  z-index: -1;
+}
+/*end Team*/
+/*button*/
+.button {
+  appearance: none;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 40px;
+  border: 0;
+  border-radius: 5px;
+  background: rgba(173, 173, 184, 1);
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+button:hover {
+  background-color: rgba(161, 163, 168, 1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #e1e7fb;
+}
+/*======================= Texnical Base==========================*/
+
+.igm_pic_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.igm_pic {
+  margin: 20px;
+
+  max-width: 250px;
+}
+/*width:100%;
+  background: #390;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.igm_pic:hover {
+  width: 130%;
+  
+}*/
+
+/*======================= Publication==========================*/
+#publication {
+  padding: 30px;
+}
+#publication li {
+  font-size: 1.2em;
+  margin: 2vh auto;
+}
+
+/*========================================Research============================*/
+.research {
+  display: flex;
+  align-items: s;
+}
+#card {
+  margin: 1px auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  /*flex-basis: 20%;*/
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.item {
+  text-align: center;
+  margin: 1%;
+  box-shadow: 0px 0px 16px 0px #e1e7fb;
+  background-color: var(--bkgrcolor_element);
+}
+.item .img img {
+  margin-top: 10px;
+  align-items: center;
+  border-radius: 80px;
+  width: 130px;
+  height: 130px;
+}
+.item .subtext {
+  font-size: 1.8em;
+  font-weight: 400;
+  margin: 5vh;
+  color: black;
+}
+.item .text {
+  margin-top: 2em;
+  color: grey;
+  font-size: 1.4em;
+  line-height: 3.5vh;
+}
+.about-research {
+  width: 70%;
+}
+.about-research p {
+  margin-top: 2em;
+  color: grey;
+  font-size: 1.4em;
+  line-height: 2.8vh;
+}
+#card-horizont {
+  margin: 1px auto;
+
+  display: flex;
+
+  /*flex-basis: 20%;*/
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+#card-horizont .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 20%;
+
+  height: 200px;
+  border-radius: 10px;
+}
+#card-horizont .item .subtext {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0.8vh;
+  color: black;
+  align-self: center;
+}
+.map {
+  margin: 20px;
+}
